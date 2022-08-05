@@ -5,6 +5,32 @@
     
     <entry>
       <title></title>
+      <link href="/2022/08/05/hexo-matery-da-jian-bo-ke-er/"/>
+      <url>/2022/08/05/hexo-matery-da-jian-bo-ke-er/</url>
+      
+        <content type="html"><![CDATA[<h2 id="参考：这里"><a href="#参考：这里" class="headerlink" title="参考：这里"></a>参考：<a href="https://blog.17lai.site/">这里</a></h2><h3 id="添加博客看板娘："><a href="#添加博客看板娘：" class="headerlink" title="添加博客看板娘："></a>添加博客看板娘：</h3><p>依赖 Font Awesome</p><p>请在 <code>&lt;head&gt;</code> 中加入。文件位置：在自己的博客目录下：b\themes\hexo-theme-matery\layout_partial\head.ejs。在Matery中自带，这一步跳过。</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> href<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>使用 Usage</p><p>将这一行代码加入 <code>&lt;head&gt;</code> 或 <code>&lt;body&gt;</code>，即可展现出效果：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/17lai/live2d-widget@latest/autoload.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2022/08/05/hexo-matery-da-jian-bo-ke-yi/"/>
+      <url>/2022/08/05/hexo-matery-da-jian-bo-ke-yi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><blockquote><ul><li>安装好<a href="https://git-scm.com/">git</a>，去官网下载一路next即可。  </li><li>注册好<a href="https://www.bilibili.com/read/cv5107169">github账号</a></li><li>安装Node.js,  <a href="https://www.cnblogs.com/zhouyu2017/p/6485265.html">安装教程</a><br><img src="https://s2.loli.net/2022/08/05/BkP8JFfRx24GpZb.png" alt="image.png"><br>如果安装时是管理员权限，安装完之后给到修改权限。<br>安装完成后检查是否安装成功<br>node -v  （安装nodejs后默认安装了npm）<br>npm -v<br>git –version<br>hexo下载：npm install hexo-cli –g      安装博客的框架(hexo)<br>hexo -v          (查看版本，有版本即安装成功)</li></ul></blockquote><p>生成ssh: ssh-keygen -t rsa -C “邮箱地址”<br>.ssh生成路径：C:\Users\你的用户名.ssh<br>测定ssh是否绑定成功：ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#104;&#117;&#98;&#x2e;&#99;&#111;&#109;</a><br>如果一直出现ssh: connect to host github.com port 22:      Connection refused的话具体看这个<a href="https://www.cnblogs.com/Archer314/p/14641310.html">教程</a></p><h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><p>在一个新建blog文件夹打开git bash</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$1 npm install –g hexo安装hexo$2 hexo init            初始化hexo博客$3 hexo –g              生成生成静态文件并部署网站$4 hexo s               静态生成hexo页面，启动服务器$5 INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>如果报错SyntaxError: Unexpected token …建议更新一下node.js版本  </p><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>hexo-theme-matery 是一个采用 Material Design 和响应式设计的 Hexo 博客主题，点击 <a href="https://www.lixl.cn/">这里</a> 可以查看示例效果。点击 <a href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">这里</a> 下载 master 分支的最新稳定版的代码，解压缩后，将 hexo-theme-matery 的文件夹复制到 Hexo 的 themes 文件夹中即可。</p><h2 id="切换主题"><a href="#切换主题" class="headerlink" title="切换主题"></a>切换主题</h2><p>修改 Hexo 根目录下的 <strong>_config.yml</strong> 的 theme 的值：theme: hexo-theme-matery<br>    _config.yml 文件的其它修改建议:  </p><ul><li>请修改 _config.yml 的 url 的值为你的网站主 URL（如：<a href="http://xxx.github.io)./">http://xxx.github.io）。</a></li><li>建议修改两个 per_page 的分页条数值为 6 的倍数，如：12、18 等，这样文章列表在各个屏幕下都能较好的显示。</li><li>如果是中文用户，则建议修改 language 的值为 zh-CN。</li></ul><h2 id="新建分类-categories-页"><a href="#新建分类-categories-页" class="headerlink" title="新建分类 categories 页"></a>新建分类 categories 页</h2><p>categories 页是用来展示所有分类的页面，如果 source 目录下还没有 categories&#x2F;index.md 文件，那么就需要新建一个，命令如下：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new page &quot;categories&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p>编辑你刚刚新建的页面文件 &#x2F;source&#x2F;categories&#x2F;index.md，至少需要以下内容：</p><p>-–</p><p>title: categories  </p><p>date: 2018-09-30 17:25:30  </p><p>type: “categories”  </p><p>layout: “categories”  </p><p><strong>—</strong></p></blockquote><h2 id="一键部署到github"><a href="#一键部署到github" class="headerlink" title="一键部署到github"></a>一键部署到github</h2><p>配置文件修改(_config.yml)<br>deploy:<br>    type: git<br>    repository: <a href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BB%93%E5%BA%93%E7%9A%84%E5%90%8D%E5%AD%97.git">https://github.com/你的名字/仓库的名字.git</a><br>    branch: 分支<br>类似如下：（repository可以替换成ssh链接）<br><img src="https://s2.loli.net/2022/08/05/AabVTuY2tCHWoGB.png" alt="image.png"><br>安装hexo-deployer-git自动部署发布工具:<br>npm install hexo-deployer-git –save<br>hexo d #上传<br>    注意：仓库名一定要取Star-champion.github.io （用户名.github.io）<br>    生成静态文件并部署网站<br> hexo g -d</p><p><img src="https://s2.loli.net/2022/08/05/T6BUku8Ph2jaQNw.png" alt="a.png"></p><p><strong>提示：</strong>subtitle和网站名称、作者都是在myblog根目录下更改的。要想看到首页轮播效果必须把几篇文章加入轮播里，然后开启轮播功能，readme文件有介绍加入文章front-matter的介绍（新建文章的配置）。</p><p>自定制修改<br>在本主题的 _config.yml 中可以修改部分自定义信息，有以下几个部分：</p><ul><li>菜单<ol><li>我的梦想</li><li>首页的音乐播放器和视频播放器配置</li><li>是否显示推荐文章名称和按钮配置</li><li>favicon 和 Logo</li><li>个人信息</li><li>TOC 目录</li><li>文章打赏信息</li><li>复制文章内容时追加版权信息</li><li>MathJax</li><li>文章字数统计、阅读时长</li><li>点击页面的’爱心’效果</li><li>我的项目</li><li>我的技能</li><li>我的相册<br>Gitalk、Gitment、Valine 和 disqus 评论配置</li><li>不蒜子统计和谷歌分析（Google Analytics）<br>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 hashcode 值取余，来选择展示对应的特色图</li></ol></li></ul><p><a href="https://blog.csdn.net/jspnetcn/article/details/104111651">其他参考</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2022/08/04/shi-shi-jiu-shi-shi/"/>
       <url>/2022/08/04/shi-shi-jiu-shi-shi/</url>
       
@@ -24,6 +50,46 @@
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>theme主题介绍</title>
+      <link href="/2018/09/07/zai-lai-yi-ge/"/>
+      <url>/2018/09/07/zai-lai-yi-ge/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>typora-vue-theme主题介绍</title>
+      <link href="/2018/09/07/ke-yi-de/"/>
+      <url>/2018/09/07/ke-yi-de/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Typora </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
       
     </entry>
     
